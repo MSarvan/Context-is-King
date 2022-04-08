@@ -1,0 +1,19 @@
+.w-btn
+{
+    background-color: blue;
+    color: aliceblue;
+    width: 325px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 200px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 6px 5px rgb(189, 186, 186);
+}
+.w-btn:hover
+{
+    transform: scale(1.025);
+}
