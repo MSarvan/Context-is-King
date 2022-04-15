@@ -35,9 +35,9 @@ function reducer(state, action)
 export function RegistrationContextProvider( {children} )
 {
     const [state, dispatch] = React.useReducer(reducer, initState);
-
+    
     const handleSubmit = () => {
-        fetch(`http://localhost:3000/users`, {
+        fetch(`http://localhost:6789/users`, {
             method: "POST",
             body: JSON.stringify(state),
             headers: {
@@ -45,6 +45,7 @@ export function RegistrationContextProvider( {children} )
             }
         })
         .then((res) => res.json())
+        .then((res) => console.log(res))
         .catch((error) => console.log(error));
     };
 

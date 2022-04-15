@@ -1,14 +1,13 @@
 import React from "react";
 
-
 const Users = () => {
     const [users, setUsers] = React.useState([]);
 
     React.useEffect(() => {
-        fetch(`http://localhost:3000/users`)
+        fetch(`http://localhost:6789/users`)
         .then((res) => res.json())
         .then((res) => setUsers(res))
-        .then((err) => console.log(err));
+        .catch((err) => console.log(err));
     }, []);
 
     return (
